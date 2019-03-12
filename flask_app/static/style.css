@@ -1,23 +1,27 @@
 *
-h1{
-  color: red;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
 }
 
-p{
-  color: blue;
-  font-family: Helvetica;
-  font-size: 16px;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-ul li{
-  background-color: yellow;
+div.home {
+  padding: 10px 0 30px 0;
+  background-color: #E6E6FA;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
 }
 
-h2{
-  color: green;
-  background-color: orange;
-}
-
-ol li {
-  background-color: teal;
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
 }
