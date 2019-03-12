@@ -4,8 +4,8 @@ app = Flask("MyApp")
 
 @app.route("/")
 
-def hello():
-    return "Hello World"
+def default():
+    return render_template("index.html", name="Internet Stranger")
 
 @app.route("/welcome")
 
@@ -15,5 +15,9 @@ def welcome():
 @app.route("/<name>")
 def hello_someone(name):
     return render_template("index.html", name=name.title())
+
+@app.route("/gen",methods=["POST"])
+def thankyou():
+    return "Thank you for your entry"
 
 app.run(debug=True)

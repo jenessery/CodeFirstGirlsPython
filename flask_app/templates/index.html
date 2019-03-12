@@ -3,18 +3,18 @@
 <html>
     <head>
         <title>My First Web App</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
     <body>
 
-            {% if message %}
+            {% if name %}
 
-                <p> <h2> Hello {{message}}! </h2></p>
+                <p> <h2> Hello {{name}}! </h2></p>
 
             {% else %}
 
-            <p>Hello - No Message!</p>
+            <p>Hello - No Name!</p>
 
             {% endif %}
 
