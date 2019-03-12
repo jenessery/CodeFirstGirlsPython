@@ -26,4 +26,6 @@ h2 {
   letter-spacing: -2px;
 }
 
-#contact-form
+form {
+  text-align: center;
+}

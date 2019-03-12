@@ -1,6 +1,23 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask("MyApp")
+
+def calcgen(year):
+    import datetime
+    today = datetime.datetime.now()
+    if year> today.year:
+        raise Exception("Year of birth cannot be in the future.")
+    elif year>1995:
+         gen = "Gen Z"
+    elif year>1976:
+        gen = "Gen Y"
+    elif year>1965:
+        gen = "Gen X"
+    elif year<1900:
+        raise Exception("Year of birth cannot be prior to 1900.")
+    else:
+        gen = "an unknown generation"
+    return gen
 
 @app.route("/")
 
@@ -16,8 +33,13 @@ def welcome():
 def hello_someone(name):
     return render_template("index.html", name=name.title())
 
-@app.route("/gen",methods=["POST"])
-def thankyou():
-    return "Thank you for your entry"
+@app.route("/yourgeneration",methods=["POST"])
+def showgeneration():
+    form_data = request.form
+    year = form_data["dob"]
+    try:
+        return render_template("gen.html", gen=calcgen(int(year)).title())
+    except:
+        return "Please input a valid year."
 
 app.run(debug=True)
