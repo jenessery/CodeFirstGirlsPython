@@ -12,11 +12,15 @@
         <div class="home">
           {% if data %}
 
-              <p> <h2> You were born on day {{day}} in month {{month}} and your horoscope is {{data}} </h2></p>
+              <p> <h2> You were born on day {{day}} in month {{month}} and your horoscope for {{data['current_date']}} is:</h2></p>
+              <p> Mood: {{data['mood']}} </p>
+              <p> Colour: {{data['color']}}</p>
+              <p> Lucky Number: {{data['lucky_number']}}</p>
+              <p> Horoscope: {{data['description']}}</p>
 
           {% else %}
 
-          <p>Sorry, I don't know your generation.</p>
+          <p>Sorry, I don't know your horoscope.</p>
 
           {% endif %}
 
