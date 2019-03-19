@@ -29,3 +29,9 @@ h2 {
 form {
   text-align: center;
 }
+
+p{
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: center;
+}
