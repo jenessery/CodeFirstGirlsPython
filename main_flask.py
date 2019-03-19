@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from horoscopeapi import get_horoscope, zodiac_sign
 
-app = Flask("MyApp")
+app = Flask("Test")
 
 def calcgen(year):
     import datetime
