@@ -54,4 +54,5 @@ def showhoroscope():
     except:
         return "Please input a valid day & month."
 
-app.run(debug=True)
+if __name__ == "__main__":
+	app.run()
